@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".Main">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/botonCat"
+        android:src="@drawable/catalunya"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/botonEsp"
+        android:layout_below="@+id/botonCat"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/spain" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/botonFra"
+        android:src="@drawable/france"
+        android:layout_below="@+id/botonCat"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/botonAle"
+        android:src="@drawable/germany"
+        android:layout_below="@+id/botonCat"
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/botonJap"
+        android:src="@drawable/japan"
+        android:layout_below="@+id/botonEsp"
+        android:layout_alignStart="@+id/botonCat"
+        android:layout_marginStart="27dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/botonUsa"
+        android:src="@drawable/usa"
+        android:layout_alignTop="@+id/botonJap"
+        android:layout_toEndOf="@+id/botonJap"
+        android:layout_marginStart="28dp" />
+</RelativeLayout>
