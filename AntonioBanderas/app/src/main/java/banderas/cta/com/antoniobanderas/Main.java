@@ -19,7 +19,7 @@ public class Main extends ActionBarActivity implements View.OnClickListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageButton ibCat = (ImageButton) findViewById(R.id.botonCat);
+                ImageButton ibCat = (ImageButton) findViewById(R.id.botonCat);
         ImageButton ibEsp = (ImageButton) findViewById(R.id.botonEsp);
         ImageButton ibFra = (ImageButton) findViewById(R.id.botonFra);
         ImageButton ibAle = (ImageButton) findViewById(R.id.botonAle);

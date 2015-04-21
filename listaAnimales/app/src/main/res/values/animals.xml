@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="animals">
+        <item name ="gato">Gato</item>
+        <item name ="perro">Perro</item>
+        <item name ="camello">Camello</item>
+    </string-array>
+</resources>
