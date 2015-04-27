@@ -2,26 +2,26 @@ package tienda.cta.com.tiendajuegos;
 
 import android.app.ListActivity;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.internal.widget.AdapterViewCompat;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.modelo.Juego;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 /**
  * Created by cta on 21/04/2015.
  */
-public class Catalogo extends ListActivity {
+public class Catalogo extends ListActivity implements AdapterView.OnItemClickListener{
 
 
     @Override
@@ -41,6 +41,13 @@ public class Catalogo extends ListActivity {
                         R.id.tituloJuego,
                         catalogo
                 ));
+
+
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
     }
 
     private class JuegosAdapter extends ArrayAdapter<String> {
@@ -55,6 +62,8 @@ public class Catalogo extends ListActivity {
         public View getView(int position, View convertView, ViewGroup parent) {
             LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View row = inflater.inflate(R.layout.juegos_item, parent, false);
+
+            Log.d("Log","Creando opciones wey!");
 
             ImageView iv = (ImageView) row.findViewById(R.id.juegoVista);
             TextView tv = (TextView) row.findViewById(R.id.tituloJuego);
