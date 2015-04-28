@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ServicioLocal</string>
+
+    <string name="arrancar">Arrancar</string>
+    <string name="enlazar">Enlazar</string>
+    <string name="saludar">Saludar</string>
+    <string name="desenlazar">Desenlazar</string>
+    <string name="parar">Parar</string>
+</resources>
