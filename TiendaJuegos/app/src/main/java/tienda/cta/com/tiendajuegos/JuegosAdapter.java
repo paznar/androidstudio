@@ -21,7 +21,7 @@ public class JuegosAdapter extends ArrayAdapter<Juego>
 
     public JuegosAdapter(Activity context, Juego[] datos)
     {
-        super(context, R.layout.juegos_item, datos);
+        super(context, R.layout.catalogo_item, datos);
         this.context = context;
         this.catalogo = datos;
     }
@@ -30,7 +30,7 @@ public class JuegosAdapter extends ArrayAdapter<Juego>
     public View getView(int position, View convertView, ViewGroup parent)
     {
         LayoutInflater inflater = context.getLayoutInflater();
-        View item = inflater.inflate(R.layout.juegos_item, null);
+        View item = inflater.inflate(R.layout.catalogo_item, null);
 
         Log.d("Log", "Creando opciones wey!");
 

@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.modelo.Juego;
+
 
 public class ActivityJuego extends ActionBarActivity {
 
@@ -19,13 +21,15 @@ public class ActivityJuego extends ActionBarActivity {
         ImageView imagen = (ImageView) findViewById(R.id.imageDescripcion);
         TextView descripcion = (TextView) findViewById(R.id.textDescripcion);
 
-        /*titulo.setText(getIntent().getStringExtra("Titulo"));
-        imagen.setImageResource(getIntent().getIntExtra("Imagen", 0));
-        descripcion.setText(getIntent().getStringExtra("Descripcion"));*/
+        Juego juego = (Juego) getIntent().getExtras().getSerializable("juego");
 
-        titulo.setText("Bible Fight");
-        imagen.setImageResource(R.drawable.bible_descripcion);
-        descripcion.setText("Juego en flash muy bien elaborado, los escenarios y los movimientos de los personasjes son geniales y pasate un buen rato peleando contra ...");
+        titulo.setText(juego.getTitulo());
+        imagen.setImageResource(juego.getIdCaratulaDescripcion());
+        descripcion.setText(juego.getDescripcion());
+
+//        titulo.setText("Bible Fight");
+//        imagen.setImageResource(R.drawable.bible_descripcion);
+//        descripcion.setText("Juego en flash muy bien elaborado, los escenarios y los movimientos de los personasjes son geniales y pasate un buen rato peleando contra ...");
 
 //        imagen.setOnClickListener(new View.OnClickListener(){
 //            @Override

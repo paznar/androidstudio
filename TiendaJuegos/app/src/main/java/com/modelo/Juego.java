@@ -17,14 +17,23 @@ public class Juego implements Serializable
     private double valoración;
     private Date fechaLanzamiento;
     private int idCaratula;
+    private int idCaratulaDescripcion;
 
-    public Juego(String id, String titulo, String genero, String plataforma, String descripcion, int idCaratula) {
+    public Juego(String id,
+                 String titulo,
+                 String genero,
+                 String plataforma,
+                 String descripcion,
+                 int idCaratula,
+                 int idCaratulaDescripcion)
+    {
         this.id = id;
         this.titulo = titulo;
         this.genero = genero;
         this.plataforma = plataforma;
         this.descripcion = descripcion;
         this.idCaratula = idCaratula;
+        this.idCaratulaDescripcion = idCaratulaDescripcion;
     }
 
     public String getId() {
@@ -97,5 +106,13 @@ public class Juego implements Serializable
 
     public void setIdCaratula(int idCaratula) {
         this.idCaratula = idCaratula;
+    }
+
+    public int getIdCaratulaDescripcion() {
+        return idCaratulaDescripcion;
+    }
+
+    public void setIdCaratulaDescripcion(int idCaratulaDescripcion) {
+        this.idCaratulaDescripcion = idCaratulaDescripcion;
     }
 }

@@ -1,6 +1,7 @@
 package tienda.cta.com.tiendajuegos;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -16,22 +17,30 @@ import com.modelo.Juego;
  */
 public class FragmentoCatalogo extends Fragment
 {
-    private Juego juego;
-
-    public Juego getJuego() {
-        return juego;
-    }
-
-    public void setJuego(Juego juego) {
-        this.juego = juego;
-    }
-
     private Juego[] catalogo =
             new Juego[]
             {
-                new Juego("1", "Larry", "Aventura Gráfica", "PC", "Aventura gráfica cargada de humor, donde viviermos las aventuras y desventuras de Larry.", R.drawable.larry),
-                new Juego("2", "Bible Fight", "Lucha", "XBox", "Juego de lucha con los protagonistas más sanguinarios de la Biblia!!", R.drawable.bible),
-                new Juego("3", "Tekken", "Lucha", "PlayStation", "Juego de lucha, con multitudo de personajes a elegir y múltiples técnicas a realizaer.", R.drawable.tekken)
+                new Juego("1",
+                        "Larry",
+                        "Aventura Gráfica",
+                        "PC",
+                        "Aventura gráfica cargada de humor, donde viviermos las aventuras y desventuras de Larry.",
+                        R.drawable.larry,
+                        R.drawable.larry_descripcion),
+                new Juego("2",
+                        "Bible Fight",
+                        "Lucha",
+                        "XBox",
+                        "Juego de lucha con los protagonistas más sanguinarios de la Biblia!!",
+                        R.drawable.bible,
+                        R.drawable.bible_descripcion),
+                new Juego("3",
+                        "Tekken",
+                        "Lucha",
+                        "PlayStation",
+                        "Juego de lucha, con multitudo de personajes a elegir y múltiples técnicas a realizaer.",
+                        R.drawable.tekken,
+                        R.drawable.tekken_descripcion)
             };
 
     private ListView listaVista;
@@ -58,8 +67,11 @@ public class FragmentoCatalogo extends Fragment
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id)
             {
-                Juego j=(Juego)listaVista.getAdapter().getItem(position);
-                setJuego(j);
+                Juego juego = (Juego) listaVista.getAdapter().getItem(position);
+
+                Intent i = new Intent(getActivity(), ActivityJuego.class);
+                i.putExtra("juego", juego);
+                startActivity(i);
             }
         });
     }
