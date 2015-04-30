@@ -11,15 +11,17 @@ import android.widget.TextView;
 
 import com.modelo.Juego;
 
+import java.util.List;
+
 /**
  * Created by cta on 27/04/2015.
  */
 public class JuegosAdapter extends ArrayAdapter<Juego>
 {
     Activity context;
-    Juego[] catalogo;
+    List<Juego> catalogo;
 
-    public JuegosAdapter(Activity context, Juego[] datos)
+    public JuegosAdapter(Activity context, List<Juego> datos)
     {
         super(context, R.layout.catalogo_item, datos);
         this.context = context;
@@ -37,7 +39,8 @@ public class JuegosAdapter extends ArrayAdapter<Juego>
         ImageView iv = (ImageView) item.findViewById(R.id.juegoVista);
         TextView tv = (TextView) item.findViewById(R.id.tituloJuego);
 
-        Juego juegoActual = catalogo[position];
+        Juego juegoActual = catalogo.get(position);
+        Log.v("Juego", "Titulo: " + juegoActual.getTitulo() + " idImagen: " + juegoActual.getIdCaratula());
 
         iv.setImageResource(juegoActual.getIdCaratula());
         tv.setText(juegoActual.getTitulo());

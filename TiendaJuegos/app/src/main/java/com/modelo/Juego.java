@@ -8,7 +8,7 @@ import java.util.Date;
  */
 public class Juego implements Serializable
 {
-    private String id;
+    private long id;
     private String titulo;
     private String genero;
     private String plataforma;
@@ -19,7 +19,7 @@ public class Juego implements Serializable
     private int idCaratula;
     private int idCaratulaDescripcion;
 
-    public Juego(String id,
+    public Juego(long id,
                  String titulo,
                  String genero,
                  String plataforma,
@@ -36,11 +36,11 @@ public class Juego implements Serializable
         this.idCaratulaDescripcion = idCaratulaDescripcion;
     }
 
-    public String getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(long id) {
         this.id = id;
     }
 

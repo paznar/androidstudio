@@ -11,7 +11,34 @@
         android:layout_height="wrap_content"
         android:text="Ver Catálogo"
         android:id="@+id/buttonVer"
-        android:layout_centerVertical="true"
+        android:layout_marginTop="55dp"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Insertar"
+        android:id="@+id/buttonInsert"
+        android:layout_below="@+id/buttonVer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Actualizar"
+        android:id="@+id/buttonUpdate"
+        android:layout_below="@+id/buttonInsert"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Borrar"
+        android:id="@+id/buttonDelete"
+        android:layout_below="@+id/buttonUpdate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp" />
 </RelativeLayout>
