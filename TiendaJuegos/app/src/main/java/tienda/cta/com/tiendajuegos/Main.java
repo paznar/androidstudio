@@ -25,8 +25,8 @@ public class Main extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         Button botonVer = (Button) findViewById(R.id.buttonVer);
-        Button botonLogin = (Button) findViewById(R.id.buttonLogin);
-        Button botonRegistro = (Button) findViewById(R.id.buttonRegistro);
+//        Button botonLogin = (Button) findViewById(R.id.buttonLogin);
+//        Button botonRegistro = (Button) findViewById(R.id.buttonRegistro);
 
 //        rellenarDatos();
 
@@ -38,27 +38,29 @@ public class Main extends ActionBarActivity {
             }
         });
 
-        botonLogin.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Main.this, ActivityLogin.class));
-            }
-        });
-
-        botonRegistro.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Main.this, ActivityRegistro.class));
-            }
-        });
+//        botonLogin.setOnClickListener(new View.OnClickListener()
+//        {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(Main.this, ActivityLogin.class));
+//            }
+//        });
+//
+//        botonRegistro.setOnClickListener(new View.OnClickListener()
+//        {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(Main.this, ActivityRegistro.class));
+//            }
+//        });
     }
 
 
 
-    public void rellenarDatos() {
+    public void rellenarDatos()
+    {
         SQLiteDatabase db = openOrCreateDatabase("TiendaDB", MODE_PRIVATE, null);
+
         db.execSQL("CREATE TABLE IF NOT EXISTS Juego(id INTEGER PRIMARY KEY AUTOINCREMENT, titulo VARCHAR, genero VARCHAR," +
                 " plataforma VARCHAR, descripcion VARCHAR, stock INT, valoracion INT(1), fechaDeLanzamiento VARCHAR," +
                 " idCaratula INT, idCaratulaDescripcion);");

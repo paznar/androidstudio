@@ -38,6 +38,7 @@ public class JuegoDao implements IJuegoDao {
     public List<Juego> listarTodos() {
         List<Juego> listaJuegos = new ArrayList<>();
         Cursor c = db.rawQuery("SELECT * FROM Juego", null);
+
         if (c.moveToFirst()) {
             do {
                 Juego juego = new Juego(c.getLong(0), c.getString(1), c.getString(2),
