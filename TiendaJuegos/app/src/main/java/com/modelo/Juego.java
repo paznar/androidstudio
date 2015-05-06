@@ -115,4 +115,14 @@ public class Juego implements Serializable
     public void setIdCaratulaDescripcion(int idCaratulaDescripcion) {
         this.idCaratulaDescripcion = idCaratulaDescripcion;
     }
+
+    @Override
+    public String toString() {
+        return "Juego{" +
+                "titulo='" + titulo + '\'' +
+                ", genero='" + genero + '\'' +
+                ", plataforma='" + plataforma + '\'' +
+                ", descripcion='" + descripcion + '\'' +
+                '}';
+    }
 }

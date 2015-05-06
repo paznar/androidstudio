@@ -10,7 +10,7 @@ import java.util.List;
 public interface IJuegoDao {
     public Juego insert(Juego juego);
     public Juego update(Juego juego);
-    public boolean delete (long id);
+    public boolean delete (String id);
     public List<Juego> listarTodos();
-    public Juego select(long id);
+    public Juego select(String titulo);
 }

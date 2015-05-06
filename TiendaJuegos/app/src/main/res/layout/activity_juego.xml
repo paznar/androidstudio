@@ -21,11 +21,10 @@
         android:layout_width="wrap_content"
         android:layout_height="300dp"
         android:id="@+id/imageDescripcion"
-        android:layout_below="@+id/textTitulo"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
         android:src="@drawable/bible_descripcion"
-        android:adjustViewBounds="false" />
+        android:adjustViewBounds="false"
+        android:layout_below="@+id/textTitulo"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -33,7 +32,14 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
         android:id="@+id/textDescripcion"
+        android:layout_alignBottom="@+id/imageDescripcion"
+        android:layout_centerHorizontal="true" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/valoracion"
         android:layout_below="@+id/imageDescripcion"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp" />
+        android:layout_marginTop="39dp" />
 </RelativeLayout>

@@ -11,6 +11,7 @@ import android.widget.Button;
 
 import com.modelo.Juego;
 
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,8 +26,9 @@ public class Main extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         Button botonVer = (Button) findViewById(R.id.buttonVer);
-//        Button botonLogin = (Button) findViewById(R.id.buttonLogin);
-//        Button botonRegistro = (Button) findViewById(R.id.buttonRegistro);
+        Button buttonInsert = (Button) findViewById(R.id.buttonInsert);
+        Button buttonBorrar = (Button) findViewById(R.id.buttonDelete);
+        Button buttonUpdate = (Button) findViewById(R.id.buttonUpdate);
 
 //        rellenarDatos();
 
@@ -38,21 +40,38 @@ public class Main extends ActionBarActivity {
             }
         });
 
-//        botonLogin.setOnClickListener(new View.OnClickListener()
-//        {
+        buttonInsert.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent(Main.this, ActivityCRUD.class);
+                intent.putExtra("action", "insert");
+
+                startActivity(intent);
+            }
+        });
+
+        buttonBorrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Main.this, ActivityCRUD.class);
+                intent.putExtra("action", "delete");
+
+                startActivity(intent);
+            }
+        });
+
+//        buttonUpdate.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
-//                startActivity(new Intent(Main.this, ActivityLogin.class));
-//            }
-//        });
+//                Intent intent = new Intent(Main.this, ActivityCRUD.class);
+//                intent.putExtra("action", "update");
 //
-//        botonRegistro.setOnClickListener(new View.OnClickListener()
-//        {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(Main.this, ActivityRegistro.class));
+//                startActivity(intent);
 //            }
 //        });
+
     }
 
 
